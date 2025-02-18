@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Javascript</title>
+    <style>
+        body{
+            background-color: rgb(107, 107, 236);
+            color:white;
+            font: normal 16pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1> 
+    <p> Eu quero muito férias (do trabalho) </p>
+</body>
+    <script>
+      
+        var n1 = Number(window.prompt('Digite um número'))  ; //colocando resposta do prompt na variavel
+        var n2 = Number(window.prompt('Digite outro número')); // convertendo para Number, para não ser string e somar invés de contatenar
+        var s = n1+n2 
+        window.alert(`A soma dos valores entre ${n1} e ${n2} é igual a ${s}`); 
+        /*
+         var n1 = (window.prompt('Digite um número')) ; 
+        var n2 = (window.prompt('Digite outro número'));
+   
+        var s = n1+n2 
+        var n1
+
+
+        dessa forma ele faz concatenação, pois mesmo digitando um número, o comando "prompt" volta sempre uma string
+        
+        (number + number) para adição
+        (string + string) para concatenação
+
+
+
+
+        ---------------------------------------
+        Tambem é possível converter especificamente para real ou inteiro:
+
+        var n1 = Number.parseInt(window.prompt('Digite um número'))  ; //colocando resposta do prompt na variavel
+        var n2 = Number.parseFloat(window.prompt('Digite outro número')); // convertendo para Number, para não ser string e somar invés de contatenar
+        var s = n1+n2 
+
+
+        respectivamente inteiro e real convertidos
+        */    
+
+    </script>
+</html>
