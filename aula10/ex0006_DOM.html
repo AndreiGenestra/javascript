@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<style>
+    #area{
+        font: normal 20pt arial;
+        background-color: red;
+        color:aliceblue;
+        width: 300px;
+        height: 300px;
+        align-content: center;
+        /*line-height:300px tambem deixa no meioooo*/
+        text-align: center;
+    }
+</style>
+<body>
+
+    <div id="area"  >
+
+        Quem eu amo?
+
+        <!--  onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()" -->
+
+    </div>
+
+    <script>
+
+        /* PEgando e colocando os eventos na div, mas sem escrever no html, mas sim no js!!!*/
+        area.addEventListener("click", clicar)
+        area.addEventListener("mouseenter", entrar)
+        area.addEventListener("mouseout", sair)
+        
+
+        clicado = false;
+        function clicar(){
+            var area = window.document.getElementById('area')
+            if(clicado == true){
+                area.innerText= "quem eu amo?";
+                clicado=false;
+            }
+            else{
+                area.innerText= "Amo a katty! :)";
+                clicado=true;
+            }
+            
+            
+        }
+
+        function entrar(){
+            area.innerText="Eu amo a katty mas diferente rsrs"
+        }
+        function sair(){
+            area.innerText="Quem eu amo?"
+        }
+    </script>
+    
+</body>
+</html>

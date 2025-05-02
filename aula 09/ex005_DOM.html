@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Começando a aprender bastante</title>
+</head>
+<style>
+
+</style>
+<body>
+    <h1 class="titulo"> Os meus primeiros passos para o DOM</h1>
+    <h2 class="titulo"> Olá mundo pessoal</h2>
+    <p class='texto'> Nada vai me <strong>parar</strong></p>
+    <p class='texto'> Nada vai me <strong>fazer chorar</strong></p>
+
+
+    <button id="troca" onclick = "clicar()" class="texto">Clique aqui muito forte</button>
+    <div id="img" class="texto">oiii</div>
+    <script>
+        window.document.write(window.document.URL + '<br>');
+
+        //selecionando por marca
+        //paragrafo numerados por ordem, primeiro paragrafo (0) e segundo (1) assim por diante
+        
+        var p1= window.document.getElementsByClassName('texto') ; // aqui selecionei o segundo parágrafo e coloquei na varíavel p1
+
+        var d = window.document.getElementById('img'); 
+
+        window.document.write('Esta escrito assim: ' + p1[0].innerText); //inner text pega só o texto sem considerar a formatação dos parágrafos como a tag <strong>
+
+        // mudei a variavel 
+        p1.style.color = 'blue'; 
+
+        //selecionando por id
+         d.innerText=" olá";
+        
+           var butao = window.document.getElementById("troca")
+           var body = window.document.body
+           var titulos = window.document.getElementsByClassName('titulo');
+           var clicado = "white"
+
+           function clicar() {
+
+
+
+            for(var i=0; i<p1.length; i++){
+             if (clicado == "white"){
+                
+                p1[i].style.color = 'white';
+                titulos[i].style.color = 'white';
+                
+             } 
+             else{
+                body.style.backgroundColor='white';
+                p1[i].style.color = 'black';
+                titulos[i].style.color = 'black';
+                
+                
+             }
+            }
+            clicado = (clicado == "white") ? "black":"white";
+           }
+            
+    </script>
+
+
+</body>
+</html>
