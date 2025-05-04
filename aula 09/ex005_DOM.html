@@ -7,6 +7,7 @@
 </head>
 <style>
 
+    
 </style>
 <body>
     <h1 class="titulo"> Os meus primeiros passos para o DOM</h1>
@@ -15,7 +16,7 @@
     <p class='texto'> Nada vai me <strong>fazer chorar</strong></p>
 
 
-    <button id="troca" onclick = "clicar()" class="texto">Clique aqui muito forte</button>
+    <button id="butao" onclick = "clicar()" class="texto">Clique aqui muito forte</button>
     <div id="img" class="texto">oiii</div>
     <script>
         window.document.write(window.document.URL + '<br>');
@@ -24,6 +25,8 @@
         //paragrafo numerados por ordem, primeiro paragrafo (0) e segundo (1) assim por diante
         
         var p1= window.document.getElementsByClassName('texto') ; // aqui selecionei o segundo parágrafo e coloquei na varíavel p1
+
+        var titulos = window.document.getElementsByClassName('titulo');
 
         var d = window.document.getElementById('img'); 
 
@@ -35,32 +38,71 @@
         //selecionando por id
          d.innerText=" olá";
         
-           var butao = window.document.getElementById("troca")
+           var butao = window.document.getElementById("butao")
            var body = window.document.body
-           var titulos = window.document.getElementsByClassName('titulo');
-           var clicado = "white"
+           
+           var modoclaro = true
 
            function clicar() {
 
 
+            modoclaro = (modoclaro == true) ? false:true;
 
             for(var i=0; i<p1.length; i++){
-             if (clicado == "white"){
+             if (modoclaro == true){
                 
                 p1[i].style.color = 'white';
-                titulos[i].style.color = 'white';
+                
                 
              } 
              else{
-                body.style.backgroundColor='white';
+                
                 p1[i].style.color = 'black';
-                titulos[i].style.color = 'black';
+                
+             
                 
                 
              }
             }
-            clicado = (clicado == "white") ? "black":"white";
+
+            for(var i=0; i<titulos.length; i++){
+                if (modoclaro == true){
+                    titulos[i].style.color = 'white'; 
+                    
+                } 
+                else{
+                    titulos[i].style.color = 'black'; 
+                }
+
+               
+            }
+            if (modoclaro == true){
+                    window.document.body.style.backgroundColor = 'black'; 
+                } 
+                else{
+                    window.document.body.style.backgroundColor = 'white'; 
+                }
+                
+
+            if(modoclaro == true){
+                butao.style.backgroundColor = 'black';
+               
+            
+            
+            
+           } else{
+                butao.style.backgroundColor = 'white';
+               
+            
            }
+        }
+
+
+
+           /*  titulos[i].style.color = 'white'; 
+           
+           
+           */
             
     </script>
 
